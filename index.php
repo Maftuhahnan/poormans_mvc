@@ -8,7 +8,7 @@ define('APP_PATH', dirname(__FILE__));
 
 define('APP_FOLDER', dirname($_SERVER['SCRIPT_NAME']));
 
-define('APP_URI', preg_replace('~(?<!:)//~', '/', 'http://'.$_SERVER['SERVER_NAME'].APP_FOLDER.'/'));
+define('APP_URI', preg_replace('#(?<!:)//#', '/', 'http://'.$_SERVER['SERVER_NAME'].APP_FOLDER.'/'));
 
 define('SYS_PATH', APP_PATH.'/system');
 

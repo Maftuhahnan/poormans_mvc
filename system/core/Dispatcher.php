@@ -14,7 +14,7 @@ class Dispatcher
 	public function parse_uri()
     {
         $real_uri = preg_replace(
-            array('~^'.APP_FOLDER.'~', '~index.php~'),
+            array('#^'.APP_FOLDER.'#', '#index.php#'),
             '',
             $this->uri,
             1
