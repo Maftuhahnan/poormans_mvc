@@ -8,7 +8,7 @@ abstract class Controller
     public $title = "title";
     protected $regions = array();
     
-    public function render($_view, $_data, $_print = true)
+    public function render($_view, $_data = array(), $_print = true)
     {
         extract($_data);
         
@@ -32,7 +32,7 @@ abstract class Controller
         }
     }
     
-    public function render_layout($_view, $_data)
+    public function render_layout($_view, $_data = array())
     {
         extract($_data);
         

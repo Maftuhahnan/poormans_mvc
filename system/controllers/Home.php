@@ -9,7 +9,7 @@ class Home extends Controller
 {
 	public function index()
     {
-        echo 'welcome to php mvc framework';
+        $this->render_layout('index');
     }
     
     public function hello($name = "rully")
