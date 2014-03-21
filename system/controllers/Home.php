@@ -9,7 +9,9 @@ class Home extends Controller
 {
 	public function index()
     {
-        $this->render_layout('index');
+        $cities = Db::all('select city.*, country.country from city join country on city.country_id = country.country_id limit 15');
+        
+        $this->render_layout('index', array('cities' => $cities));
     }
     
     public function hello($name = "rully")
